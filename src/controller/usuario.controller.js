@@ -15,7 +15,7 @@ const listar = async (req, res) => {
 const cadastrar = async (req, res) => {
     try {
         const data = req.body;
-
+        const {senha, email, nome, idade} = req.body
         const item = await prisma.usuario.create({
             data
         });
